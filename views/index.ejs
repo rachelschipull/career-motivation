@@ -4,13 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Change Your Career to Tech</title>
 </head>
+
 <body>
-    <h1>Career Change Encouragement!</h1>
-    <p>Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Annonymous stats to encourage you. </p>
+<!--Title Nav-->
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 justify-content-center">
+        <div class="container">
+            <a href="#" class="navbar-brand">Career Change Motivation</a>
+        </div>
+    </nav>
+
+<!--Intro Section-->    
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <h1>Career Change Encouragement!</h1>
+            <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Anonymous stats from a wide range of roles to encourage you. </p>
+            <!--<img class="img-fluid d-sm-block m-4" src="undraw_make_it_rain_iwk4.svg" alt="">-->
+        </div>
+    </section>
+
+<!-- Stats Table-->
+<section class="p-5">
     <h2>Success Stats</h2>
-    <ul class="successStats">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Previous Title</th>
+            <th scope="col">Previous Income</th>
+            <th scope="col">Tech Title</th>
+            <th scope="col">Tech Income</th>
+            <th scope="col">% Increase</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr class="successStats">
+                    <th scope="row"></th>
+                    <% for (let i=0; i < info.length; i++) {%>
+                    <td><%= info[i].prevTitle %></td>
+                    <td>$<%= info[i].prevIncome %></td>
+                    <td><%= info[i].techTitle %></td>
+                    <td>$<%= info[i].techIncome %></td>
+                    <td></td>
+                <%}%>
+            </tr>
+        </tbody>
+  <!--  <ul class="successStats">
         <% for (let i=0; i < info.length; i++){%>
             <li class="rapper">
             <span><%= info[i].prevTitle %></span>
@@ -23,7 +64,10 @@
             
         <%}%>
         
-    </ul>
+    </ul>-->
+    </table>
+</section>
+
     <h2>Add a Success Stat</h2>
     <p>If you successfully transitioned from another career to tech, add your last role outside of tech, and your first full-time role in tech. Thank you for the encouragement!</p>
 
@@ -32,7 +76,7 @@
         <input type="text" placeholder="Previous Income" name="prevIncome">
         <input type="text" placeholder="Tech Title" name="techTitle">
         <input type="text" placeholder="Tech Income" name="techIncome">
-        <input type="submit">
+        <input type="submit" placeholder="Submit">
     </form>
     
 
