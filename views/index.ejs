@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Your Career to Tech</title>
+</head>
+<body>
+    <h1>Career Change Encouragement!</h1>
+    <p>Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Annonymous stats to encourage you. </p>
+    <h2>Success Stats</h2>
+    <ul class="successStats">
+        <% for (let i=0; i < info.length; i++){%>
+            <li class="rapper">
+            <span><%= info[i].prevTitle %></span>
+            <span>$<%= info[i].prevIncome %></span>
+            <span>-></span>
+            <span><%= info[i].techTitle %></span>
+            <span>$<%= info[i].techIncome %></span>
+            <span id=percentIncrease></span>
+            </li>
+            
+        <%}%>
+        
+    </ul>
+    <h2>Add a Success Stat</h2>
+    <p>If you successfully transitioned from another career to tech, add your last role outside of tech, and your first full-time role in tech. Thank you for the encouragement!</p>
+
+    <form action="/addStat" method="POST">
+        <input type="text" placeholder="Previous Title" name="prevTitle">
+        <input type="text" placeholder="Previous Income" name="prevIncome">
+        <input type="text" placeholder="Tech Title" name="techTitle">
+        <input type="text" placeholder="Tech Income" name="techIncome">
+        <input type="submit">
+    </form>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
