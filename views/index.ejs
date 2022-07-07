@@ -40,16 +40,16 @@
         </tr>
         </thead>
         <tbody>
+            <% for (let i=0; i < info.length; i++) {%>
             <tr class="successStats">
                     <th scope="row"></th>
-                    <% for (let i=0; i < info.length; i++) {%>
                     <td><%= info[i].prevTitle %></td>
                     <td>$<%= info[i].prevIncome %></td>
                     <td><%= info[i].techTitle %></td>
                     <td>$<%= info[i].techIncome %></td>
-                    <td></td>
-                <%}%>
+                    <td><%= (parseInt(info[i].techIncome, 10)/parseInt(info[i].prevIncome, 10)).toFixed(2) %></td>
             </tr>
+            <%}%>
         </tbody>
   <!--  <ul class="successStats">
         <% for (let i=0; i < info.length; i++){%>
