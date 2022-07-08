@@ -10,7 +10,7 @@
 
 <body>
 <!--Title Nav-->
-    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 justify-content-center">
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark py-3 justify-content-center">
         <div class="container">
             <a href="#" class="navbar-brand">Career Change Motivation</a>
         </div>
@@ -19,9 +19,9 @@
 <!--Intro Section-->    
     <section class="bg-dark text-light p-5 text-center text-sm-start">
         <div class="container">
-            <h1>Career Change Encouragement!</h1>
+            <h1>Career Change Motivation</h1>
             <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Anonymous stats from a wide range of roles to encourage you. </p>
-            
+
         </div>
     </section>
 
@@ -31,7 +31,7 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col"></th>
             <th scope="col">Previous Title</th>
             <th scope="col">Previous Income</th>
             <th scope="col">Tech Title</th>
@@ -47,7 +47,7 @@
                     <td>$<%= info[i].prevIncome %></td>
                     <td><%= info[i].techTitle %></td>
                     <td>$<%= info[i].techIncome %></td>
-                    <td class="text-success"><!--<%= ((parseInt(info[i].techIncome, 10) / (parseInt(info[i].prevIncome, 10)).toFixed(2) %>--></td>
+                    <td></td>
             </tr>
             <%}%>
         </tbody>
