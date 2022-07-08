@@ -27,7 +27,7 @@
 
 <!-- Stats Table-->
 <section class="p-5">
-    <h2>Success Stats</h2>
+    <h2 class="text-center">Success Stats</h2>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -67,18 +67,18 @@
     </ul>-->
     </table>
 </section>
-
+<section class="p-5 text-center">
     <h2>Add a Success Stat</h2>
-    <p>If you successfully transitioned from another career to tech, add your last role outside of tech, and your first full-time role in tech. Thank you for the encouragement!</p>
+    <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest $5000 or as close as you can remember. These submissions are completely anonymous. Thank you for the encouragement!</p>
 
     <form action="/addStat" method="POST">
-        <input type="text" placeholder="Previous Title" name="prevTitle">
-        <input type="text" placeholder="Previous Income" name="prevIncome">
-        <input type="text" placeholder="Tech Title" name="techTitle">
-        <input type="text" placeholder="Tech Income" name="techIncome">
-        <input type="submit" placeholder="Submit">
+        <input type="text" placeholder="Previous Title" name="prevTitle" required="true">
+        <input type="text" placeholder="Previous Income" name="prevIncome" required="true">
+        <input type="text" placeholder="Tech Title" name="techTitle" required="true">
+        <input type="text" placeholder="Tech Income" name="techIncome" required="true">
+        <input type="submit" placeholder="Submit" value="Submit">
     </form>
-    
+</section>
 <footer></footer>
     <script src="js/main.js"></script>
 </body>
