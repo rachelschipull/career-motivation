@@ -20,7 +20,7 @@
     <section class="bg-dark text-light p-5 text-center text-sm-start">
         <div class="container">
             <h1>Career Change Motivation</h1>
-            <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Anonymous stats from a wide range of roles to encourage you. </p>
+            <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Here is a list of self-reported stats from a wide range of roles to encourage you. </p>
 
         </div>
     </section>
@@ -47,11 +47,13 @@
                     <td>$<%= info[i].prevIncome %></td>
                     <td><%= info[i].techTitle %></td>
                     <td>$<%= info[i].techIncome %></td>
-                    <td></td>
+                    <% let prev = parseInt(info[i].prevIncome, 10)%>
+                    <% let tech = parseInt(info[i].techIncome, 10)%>
+                    <td class="text-success"><%= ((tech - prev)/tech * 100).toFixed(2) %>%</td>
             </tr>
             <%}%>
         </tbody>
-  <!--  <ul class="successStats">
+<!--  <ul class="successStats">
         <% for (let i=0; i < info.length; i++){%>
             <li class="rapper">
             <span><%= info[i].prevTitle %></span>
@@ -69,7 +71,7 @@
 </section>
 <section class="p-5 text-center">
     <h2>Add a Success Stat</h2>
-    <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest $5000 or as close as you can remember. These submissions are completely anonymous. Thank you for the encouragement!</p>
+    <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest $1000 or as close as you can remember. These submissions are completely anonymous. Thank you for the encouragement!</p>
 
     <form action="/addStat" method="POST">
         <input type="text" placeholder="Previous Title" name="prevTitle" required="true">
@@ -79,7 +81,10 @@
         <input type="submit" placeholder="Submit" value="Submit">
     </form>
 </section>
-<footer></footer>
+<footer class="p-3 bg-dark text-light flex-direction-row">
+    <p>&copy 2022 SchipThatCode</p>
+    <a class="text-success" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
+</footer>
     <script src="js/main.js"></script>
 </body>
 </html>
