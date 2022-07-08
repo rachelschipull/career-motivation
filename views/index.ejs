@@ -21,7 +21,7 @@
         <div class="container">
             <h1>Career Change Encouragement!</h1>
             <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Anonymous stats from a wide range of roles to encourage you. </p>
-            <!--<img class="img-fluid d-sm-block m-4" src="undraw_make_it_rain_iwk4.svg" alt="">-->
+            
         </div>
     </section>
 
@@ -47,7 +47,7 @@
                     <td>$<%= info[i].prevIncome %></td>
                     <td><%= info[i].techTitle %></td>
                     <td>$<%= info[i].techIncome %></td>
-                    <td><%= (parseInt(info[i].techIncome, 10)/parseInt(info[i].prevIncome, 10)).toFixed(2) %></td>
+                    <td class="text-success"><!--<%= ((parseInt(info[i].techIncome, 10) / (parseInt(info[i].prevIncome, 10)).toFixed(2) %>--></td>
             </tr>
             <%}%>
         </tbody>
