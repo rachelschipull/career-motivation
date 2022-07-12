@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
+const cors = requre('cors')
 const MongoClient = require('mongodb').MongoClient
 const PORT = 3000
-const ejsLint = require('ejs-lint')
 require('dotenv').config()
 
 let db,
@@ -19,6 +19,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(cors())
 
 app.get('/',(request, response)=>{
     db.collection('stats').find().toArray()
@@ -30,7 +31,7 @@ app.get('/',(request, response)=>{
 
 app.post('/addStat', (request, response) => {
     db.collection('stats').insertOne({prevTitle: request.body.prevTitle,
-    prevIncome: request.body.prevIncome, techTitle: request.body.techTitle, techIncome: request.body.techIncome})
+    prevIncome: request.body.prevIncome.replace(/,/g,''), techTitle: request.body.techTitle, techIncome: request.body.techIncome.replace(/,/g,'')})
     .then(result => {
         console.log('Stat Added')
         response.redirect('/')
