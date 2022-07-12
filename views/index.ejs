@@ -67,9 +67,10 @@
             <% let prev = parseInt(info[i].prevIncome, 10)%>
             <% let tech = parseInt(info[i].techIncome, 10)%>
             <% sumChange += ((tech - prev)/prev * 100).toFixed(2) %>
+            <% console.log(sumChange) %>
             <%}%>
-        <h3 class="text-success"><%= sumChange/(info.length - 1) %></h3>
-        <% console.log(sumChange) %>
+        <h3 class="text-success"><%= sumChange/9 %></h3>
+        
         
     </div>
     </section>
