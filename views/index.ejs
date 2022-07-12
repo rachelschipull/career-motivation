@@ -58,6 +58,20 @@
     </table>
     </div>
 </section>
+
+<section class="p-5 text-light bg-dark">
+    <div class="container">
+        <h2>Average % Increase</h2>
+        <% let sumChange = 0 %>
+        <% for (let i=0; i < info.length; i++) {%>
+            <% let prev = parseInt(info[i].prevIncome, 10)%>
+            <% let tech = parseInt(info[i].techIncome, 10)%>
+            <% sumChange += ((tech - prev)/prev * 100).toFixed(2) %>
+        <h3 class="text-success"><%= sumChange/(info.length - 1) %></h3>
+        <%}%>
+    </div>
+    </section>
+
 <section class="p-5 text-center">
     <h2>Add a Success Stat</h2>
     <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest 1000 or as close as you can remember. Do not add a "$", we'll do that on the backend. (If your previous work was part time please add "PT" after the role.)</p> 
@@ -67,6 +81,7 @@
         <input type="text" placeholder="Previous Income USD" name="prevIncome" required="true">
         <input type="text" placeholder="Tech Title" name="techTitle" required="true">
         <input type="text" placeholder="Tech Income USD" name="techIncome" required="true">
+        <input type="checkbox" required="false" class="d-none">
         <input type="submit" placeholder="Submit" value="Submit">
     </form>
 </section>
