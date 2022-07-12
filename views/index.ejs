@@ -19,24 +19,26 @@
 <!--Intro Section-->    
     <section class="bg-dark text-light p-5 text-center text-sm-start">
         <div class="container">
-            <h1>Career Change Motivation</h1>
-            <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. Here is a list of self-reported stats from a wide range of roles to encourage you. </p>
-
+            <div class="d-sm-flex align-items-center justify-content-between">
+                    <h1>Career Change Motivation</h1>
+                    <p class="lead my-4">Have you been trying to transition to tech, but are feeling defeated? Here's some motivation to keep you on track. This is a list of self-reported stats from a wide range of roles to encourage you. </p>
+            </div>
         </div>
     </section>
 
 <!-- Stats Table-->
 <section class="p-5">
     <h2 class="text-center">Success Stats</h2>
+    <div class="table-responsive-sm">
     <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col"></th>
             <th scope="col">Previous Title</th>
-            <th scope="col">Previous Income</th>
+            <th scope="col">Previous Income in USD</th>
             <th scope="col">Tech Title</th>
-            <th scope="col">Tech Income</th>
-            <th scope="col">% Increase</th>
+            <th scope="col">Tech Income in USD</th>
+            <th scope="col">% Change</th>
         </tr>
         </thead>
         <tbody>
@@ -49,7 +51,7 @@
                     <td>$<%= info[i].techIncome %></td>
                     <% let prev = parseInt(info[i].prevIncome, 10)%>
                     <% let tech = parseInt(info[i].techIncome, 10)%>
-                    <td class="text-success"><%= ((tech - prev)/tech * 100).toFixed(2) %>%</td>
+                    <td class="text-success"><%= ((tech - prev)/prev * 100).toFixed(2) %>%</td>
             </tr>
             <%}%>
         </tbody>
@@ -68,16 +70,18 @@
         
     </ul>-->
     </table>
+    </div>
 </section>
 <section class="p-5 text-center">
     <h2>Add a Success Stat</h2>
-    <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest $1000 or as close as you can remember. These submissions are completely anonymous. Thank you for the encouragement!</p>
-
+    <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest 1000 or as close as you can remember. Do not add a "$", we'll do that on the backend. (If your previous work was part time please add "PT" after the role.)</p> 
+    <p>These submissions are completely anonymous. All fields are required. Thank you for the encouragement!</p>
+    
     <form action="/addStat" method="POST">
         <input type="text" placeholder="Previous Title" name="prevTitle" required="true">
-        <input type="text" placeholder="Previous Income" name="prevIncome" required="true">
+        <input type="text" placeholder="Previous Income USD" name="prevIncome" required="true">
         <input type="text" placeholder="Tech Title" name="techTitle" required="true">
-        <input type="text" placeholder="Tech Income" name="techIncome" required="true">
+        <input type="text" placeholder="Tech Income USD" name="techIncome" required="true">
         <input type="submit" placeholder="Submit" value="Submit">
     </form>
 </section>
@@ -85,6 +89,6 @@
     <p>&copy 2022 SchipThatCode</p>
     <a class="text-success" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
 </footer>
-    <script src="js/main.js"></script>
+
 </body>
 </html>
