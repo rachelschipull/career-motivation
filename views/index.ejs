@@ -35,10 +35,10 @@
         <tr>
             <th scope="col"></th>
             <th scope="col">Previous Title</th>
-            <th scope="col">Previous Income</th>
+            <th scope="col">Previous Income in USD</th>
             <th scope="col">Tech Title</th>
-            <th scope="col">Tech Income</th>
-            <th scope="col">% Increase</th>
+            <th scope="col">Tech Income in USD</th>
+            <th scope="col">% Change</th>
         </tr>
         </thead>
         <tbody>
@@ -79,9 +79,9 @@
 
     <form action="/addStat" method="POST">
         <input type="text" placeholder="Previous Title" name="prevTitle" required="true">
-        <input type="text" placeholder="Previous Income" name="prevIncome" required="true">
+        <input type="text" placeholder="Previous Income USD" name="prevIncome" required="true">
         <input type="text" placeholder="Tech Title" name="techTitle" required="true">
-        <input type="text" placeholder="Tech Income" name="techIncome" required="true">
+        <input type="text" placeholder="Tech Income USD" name="techIncome" required="true">
         <input type="submit" placeholder="Submit" value="Submit">
     </form>
 </section>
