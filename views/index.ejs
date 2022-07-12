@@ -62,14 +62,15 @@
 <section class="p-5 text-light bg-dark">
     <div class="container">
         <h2>Average % Increase</h2>
+        <% let sumChange = 0 %>
         <% for (let i=0; i < info.length; i++) {%>
-            <% let sumChange = 0 %>
             <% let prev = parseInt(info[i].prevIncome, 10)%>
             <% let tech = parseInt(info[i].techIncome, 10)%>
             <% sumChange += ((tech - prev)/prev * 100).toFixed(2) %>
+            <%}%>
         <h3 class="text-success"><%= sumChange/(info.length - 1) %></h3>
         <% console.log(sumChange) %>
-        <%}%>
+        
     </div>
     </section>
 
