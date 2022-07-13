@@ -31,7 +31,7 @@ app.get('/',(request, response)=>{
 
 app.post('/addStat', (request, response) => {
     db.collection('stats').insertOne({prevTitle: request.body.prevTitle,
-    prevIncome: request.body.prevIncome.replace(/,/g,''), techTitle: request.body.techTitle, techIncome: request.body.techIncome.replace(/,/g,'')})
+    prevIncome: request.body.prevIncome.replace(/[$,.]/g,''), techTitle: request.body.techTitle, techIncome: request.body.techIncome.replace(/[$,.]/g,'')})
     .then(result => {
         console.log('Stat Added')
         response.redirect('/')
