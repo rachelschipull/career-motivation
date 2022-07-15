@@ -29,6 +29,8 @@ app.get('/',(request, response)=>{
     .catch(error => console.error(error))
 })
 
+//app.get('/stories')
+
 app.post('/addStat', (request, response) => {
     db.collection('stats').insertOne({prevTitle: request.body.prevTitle,
     prevIncome: request.body.prevIncome.replace(/[$,.]/g,''), techTitle: request.body.techTitle, techIncome: request.body.techIncome.replace(/[$,.]/g,'')})
@@ -38,6 +40,8 @@ app.post('/addStat', (request, response) => {
     })
     .catch(error => console.error(error))
 })
+
+//app.post('/addStory')
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
