@@ -8,17 +8,54 @@
     <title>Share You Career Change Story</title>
 </head>
 
-<body>
+<!--Nav-->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark py-3 justify-content-center">
+    <div class="container">
+        <a href="/views/index.ejs" class="navbar-brand">Career Change Motivation</a>
+    </div>
+</nav>
 
+<!--Banner-->
+<section class="bg-dark text-light p-5 text-center text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center">
+                <h1>Career Change Stories</h1>
+                <p class="lead my-4">Do you prefer to know more about what it takes to make a change from a different career into tech? Here are stories from folks who have transitioned and are willing to share. </p>
+        </div>
+    </div>
+</section>
 
+<!--Story Tiles-->
+<section class="p-5">
+    <h2 class="lead">Stories Title</h2>
+    <div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+    </div>
+</section>
 
-
-
+<!--Entry Form-->
 <!--how many years of experience
 where they are located
 how long did it take to make the transition
 how many interviews/what were your interviews like
 why did they choose tech/dev/data vs other careers
 -->
+<form action="/addStory" method="POST">
+    <input type="text" placeholder="Tell your story" name="newStory" required="true" maxlength="1000">
+    <input type="submit" placeholder="Submit" value="Submit">
+</form>
+<footer class="p-3 bg-dark text-light flex-direction-row">
+    <p>&copy 2022 SchipThatCode</p>
+    <a class="text-success" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
+</footer>
+
 </body>
 </html>
