@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient
+const { response } = require('express')
 const PORT = 3000
 require('dotenv').config()
 
@@ -29,7 +30,13 @@ app.get('/',(request, response)=>{
     .catch(error => console.error(error))
 })
 
-//app.get('/stories')
+app.get('/stories', (request, response)=>{
+    db.collection('stories').find().toArray()
+    .then(data => {
+        response.render('stories.ejs', {info: data})
+    })
+    .catch(error => console.error(error))
+})
 
 app.post('/addStat', (request, response) => {
     db.collection('stats').insertOne({prevTitle: request.body.prevTitle,
@@ -41,7 +48,14 @@ app.post('/addStat', (request, response) => {
     .catch(error => console.error(error))
 })
 
-//app.post('/addStory')
+app.post('/addStory', (request, response) => {
+    db.collection('stories').insertOne({newStory: request.body.newStory})
+    .then(result => {
+        console.log('Story Added')
+        response.redirect('/stories')
+    })
+    .catch(error => console.error(error))
+})
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
