@@ -51,7 +51,8 @@
                     <td>$<%= info[i].techIncome %></td>
                     <% let prev = parseInt(info[i].prevIncome, 10)%>
                     <% let tech = parseInt(info[i].techIncome, 10)%>
-                    <td class="text-success"><%= ((tech - prev)/prev * 100).toFixed(2) %>%</td>
+                    <% let change = ((tech - prev)/prev * 100).toFixed(2) %>
+                    <td class="<%= change > ? 'text-success':'text-danger' %>"><%= change %>%</td>
             </tr>
             <%}%>
         </tbody>
