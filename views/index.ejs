@@ -52,7 +52,7 @@
                     <% let prev = parseInt(info[i].prevIncome, 10)%>
                     <% let tech = parseInt(info[i].techIncome, 10)%>
                     <% let change = ((tech - prev)/prev * 100).toFixed(2) %>
-                    <td class="<%= change > ? 'text-success':'text-danger' %>"><%= change %>%</td>
+                    <td class="<%= change > 0 ? 'text-success':'text-danger' %>"><%= change %>%</td>
             </tr>
             <%}%>
         </tbody>
