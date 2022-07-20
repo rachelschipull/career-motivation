@@ -50,8 +50,8 @@ why did they choose tech/dev/data vs other careers
 -->
 <section class="p-5">
     <div class="container">
-        <div class="lead text-center">
-            <h2>Add your story!</h2>
+        <div>
+            <h2 class="lead text-center">Add your story!</h2>
             <p>Share in a paragraph or two how you made the transition in to tech. Consider the following questions while writing your story.</p>
             <ul>
                 <li>How many years of work experience did you have before you made the transition?</li>
@@ -62,7 +62,7 @@ why did they choose tech/dev/data vs other careers
                 <li>Finally, why did you choose tech and how are you feeling about it now?</li>
             </ul>
             <form action="/addStory" method="POST">
-                <input type="text" placeholder="Tell your story" name="newStory" required="true" maxlength="2000">
+                <input type="textarea" placeholder="Tell your story" name="newStory" required="true" maxlength="2000" rows="5" cols="50">
                 <select name="industry" required="true">
                     <option value="Education">Education</option>
                     <option value="Healthcare">Healthcare</option>
