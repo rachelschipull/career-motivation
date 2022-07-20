@@ -49,7 +49,7 @@ app.post('/addStat', (request, response) => {
 })
 
 app.post('/addStory', (request, response) => {
-    db.collection('stories').insertOne({newStory: request.body.newStory})
+    db.collection('stories').insertOne({newStory: request.body.newStory, industry: request.body.industry})
     .then(result => {
         console.log('Story Added')
         response.redirect('/stories')
