@@ -61,9 +61,12 @@ why did they choose tech/dev/data vs other careers
                 <li>What part of the world are you located in and how did that impact your career chage (if at all)?</li>
                 <li>Finally, why did you choose tech and how are you feeling about it now?</li>
             </ul>
-            <form action="/addStory" method="POST">
-                <input type="textarea" placeholder="Tell your story" name="newStory" required="true" maxlength="2000" rows="5" cols="50">
-                <select name="industry" required="true">
+            <form class="p-5 input-group" action="/addStory" method="POST">
+                <div class="mb-2">
+                    <textarea class="form-control" placeholder="Tell your story" name="newStory" required="true" maxlength="2000" rows="3"></textarea>
+                </div>
+                <select class="form-select" aria-label="Former industry" name="industry" required="true">
+                    <option selected>Choose your former industry</option>
                     <option value="Education">Education</option>
                     <option value="Healthcare">Healthcare</option>
                     <option value="Hospitality">Hospitality</option>
@@ -78,7 +81,9 @@ why did they choose tech/dev/data vs other careers
                     <option value="HumanServices">Human Services/NonProfits</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="submit" placeholder="Submit" value="Submit">
+                <div class="col-6">
+                    <button class="btn btn-primary" type="submit" value="Submit">
+                </div>
             </form>
         </div>
     </div>
@@ -86,7 +91,7 @@ why did they choose tech/dev/data vs other careers
 
 <footer class="p-3 bg-dark text-light flex-direction-row">
     <p>&copy 2022 SchipThatCode</p>
-    <a class="text-success" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
+    <a class="text-purple" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
 </footer>
 
 </body>
