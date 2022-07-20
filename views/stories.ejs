@@ -48,25 +48,42 @@ how long did it take to make the transition
 how many interviews/what were your interviews like
 why did they choose tech/dev/data vs other careers
 -->
-<form action="/addStory" method="POST">
-    <input type="text" placeholder="Tell your story" name="newStory" required="true" maxlength="1000">
-    <select name="industry" required="true">
-        <option value="Education">Education</option>
-        <option value="Healthcare">Healthcare</option>
-        <option value="Hospitality">Hospitality</option>
-        <option value="Engineering">Engineering/Oil & Energy</option>
-        <option value="Finance">Finance/Accounting</option>
-        <option value="RealEstate">Real Estate</option>
-        <option value="Construction">Construction/Automotive/Manufacturing</option>
-        <option value="Retail">Retail</option>
-        <option value="Government">Government/Military</option>
-        <option value="Communcations">Communications/Marketing</option>
-        <option value="Logistics">Logistics/Supply Chain/Shipping</option>
-        <option value="HumanServices">Human Services/NonProfits</option>
-        <option value="Other">Other</option>
-    </select>
-    <input type="submit" placeholder="Submit" value="Submit">
-</form>
+<section class="p-5">
+    <div class="container">
+        <div class="lead text-center">
+            <h2>Add your story!</h2>
+            <p>Share in a paragraph or two how you made the transition in to tech. Consider the following questions while writing your story.</p>
+            <ul>
+                <li>How many years of work experience did you have before you made the transition?</li>
+                <li>What inspired the change and how did you know it was the right time?</li>
+                <li>How long did it take you to make the transition?</li>
+                <li>How many interviews did you do and what were they like?</li>
+                <li>What part of the world are you located in and how did that impact your career chage (if at all)?</li>
+                <li>Finally, why did you choose tech and how are you feeling about it now?</li>
+            </ul>
+            <form action="/addStory" method="POST">
+                <input type="text" placeholder="Tell your story" name="newStory" required="true" maxlength="2000">
+                <select name="industry" required="true">
+                    <option value="Education">Education</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Hospitality">Hospitality</option>
+                    <option value="Engineering">Engineering/Oil & Energy</option>
+                    <option value="Finance">Finance/Accounting</option>
+                    <option value="RealEstate">Real Estate</option>
+                    <option value="Construction">Construction/Automotive/Manufacturing</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Government">Government/Military</option>
+                    <option value="Communcations">Communications/Marketing</option>
+                    <option value="Logistics">Logistics/Supply Chain/Shipping</option>
+                    <option value="HumanServices">Human Services/NonProfits</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="submit" placeholder="Submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</section>
+
 <footer class="p-3 bg-dark text-light flex-direction-row">
     <p>&copy 2022 SchipThatCode</p>
     <a class="text-success" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
