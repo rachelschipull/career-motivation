@@ -20,7 +20,7 @@
     <div class="container">
         <div class="d-sm-flex align-items-center">
                 <h1>Career Change Stories</h1>
-                <p class="lead my-4">Do you prefer to know more about what it takes to make a change from a different career into tech? Here are stories from folks who have transitioned and are willing to share. </p>
+                <p class="lead my-4">Learn more about what it takes to make a career change into tech. Here are stories from folks who have transitioned and are willing to share. </p>
         </div>
     </div>
 </section>
@@ -50,6 +50,21 @@ why did they choose tech/dev/data vs other careers
 -->
 <form action="/addStory" method="POST">
     <input type="text" placeholder="Tell your story" name="newStory" required="true" maxlength="1000">
+    <select name="industry" required="true">
+        <option value="Education">Education</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Hospitality">Hospitality</option>
+        <option value="Engineering">Engineering/Oil & Energy</option>
+        <option value="Finance">Finance/Accounting</option>
+        <option value="RealEstate">Real Estate</option>
+        <option value="Construction">Construction/Automotive/Manufacturing</option>
+        <option value="Retail">Retail</option>
+        <option value="Government">Government/Military</option>
+        <option value="Communcations">Communications/Marketing</option>
+        <option value="Logistics">Logistics/Supply Chain/Shipping</option>
+        <option value="HumanServices">Human Services/NonProfits</option>
+        <option value="Other">Other</option>
+    </select>
     <input type="submit" placeholder="Submit" value="Submit">
 </form>
 <footer class="p-3 bg-dark text-light flex-direction-row">
