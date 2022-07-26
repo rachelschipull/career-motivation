@@ -61,44 +61,43 @@ why did they choose tech/dev/data vs other careers
                 <li>Finally, why did you choose tech and how are you feeling about it now?</li>
             </ul>
             <form class="p-3" action="/addStory" method="POST">
-                <select class="form-select" aria-label="Former industry" name="industry" required="true">
+                <select class="form-select p-3" aria-label="Former industry" name="industry" required="true">
                     <option selected>Choose your former industry</option>
                     <option value="Education">Education</option>
                     <option value="Healthcare">Healthcare</option>
                     <option value="Hospitality">Hospitality</option>
                     <option value="Engineering">Engineering/Oil & Energy</option>
                     <option value="Finance">Finance/Accounting</option>
-                    <option value="RealEstate">Real Estate</option>
                     <option value="Construction">Construction/Automotive/Manufacturing</option>
-                    <option value="Retail">Retail/Sales</option>
+                    <option value="Sales">Retail/Sales/Real Estate</option>
                     <option value="Government">Government/Military</option>
                     <option value="Communcations">Communications/Marketing</option>
                     <option value="Logistics">Logistics/Supply Chain/Shipping</option>
                     <option value="HumanServices">Human Services/NonProfits</option>
                     <option value="Other">Other</option>
                 </select>
-                <select class="form-select" aria-label="Years Experience" name="yearsExp" required="true">
+                <select class="form-select p-3" aria-label="Years Experience" name="yearsExp" required="true">
                     <option selected>Years of Experience before Tech</option>
                     <option value="1-4 years">1-4 years</option>
                     <option value="5-10 years">5-10 years</option>
                     <option value="11-15 years">11-15 years</option>
                     <option value="16+ years">16+ years</option>
                 </select>
-                <select class="form-select" aria-label="Time to Transition" name="transTime" required="true">
+                <select class="form-select p-3" aria-label="Time to Transition" name="transTime" required="true">
                     <option selected>Time it Took You to Transition</option>
                     <option value="&#60;6 months">&#60;6 months</option>
                     <option value="6-12 months">6-12 months</option>
                     <option value="1-2 years">1-2 years</option>
                     <option value="2+ years">2+ years</option>
                 </select>
-                <select class="form-select" aria-label="Number of Interviews" name="intNumber" required="true">
+                <select class="form-select p-3" aria-label="Number of Interviews" name="intNumber" required="true">
                     <option selected>Number of Interviews</option>
                     <option value="&#60;10 interviews">&#60;10 interviews</option>
                     <option value="10-50 interviews">10-50 interviews</option>
                     <option value="51-100 interviews">51-100 interviews</option>
                     <option value="100+ interviews">100+ interviews</option>
                 </select>
-                <select class="form-select" multiple aria-label="Tech Education" name="techEducation" required="true">
+                <select class="form-select p-3" aria-label="Tech Education" name="techEducation" required="true">
                     <option selection>Tech Education Path</option>
                     <option value="Higher Education">Higher Education (CS courses)</option>
                     <option value="Bootcamp">Bootcamp</option> 
@@ -106,7 +105,7 @@ why did they choose tech/dev/data vs other careers
                     <option value="On the job">On-the-Job Training</option>
                     <option value="Other">Other(Describe below)</option>
                 </select>
-                <div class="mb-2">
+                <div class="mb-2 p-3">
                     <textarea class="form-control" placeholder="Tell your story" name="newStory" required="true" maxlength="3000" rows="3"></textarea>
                 </div>
                 <input class="btn btn-primary m-2" type="submit" value="Submit">
