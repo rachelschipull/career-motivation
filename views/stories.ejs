@@ -54,19 +54,13 @@ why did they choose tech/dev/data vs other careers
             <h2 class="text-center">Add your story!</h2>
             <p>Share a paragraph or two about how you made the transition to tech. Consider the following questions while writing your story.</p>
             <ul>
-                <li>How many years of work experience did you have before you made the transition?</li>
                 <li>What inspired the change and how did you know it was the right time?</li>
-                <li>How long did it take you to make the transition?</li>
-                <li>How many interviews did you do and what were they like?</li>
+                <li>What was your interview process like for your first tech role?</li>
                 <li>How did networking play a role in your transition, if at all?</li>
-                <li>How did you learn the tech skills for your new role (bootcamp, self taught, community taught, etc)?</li>
                 <li>What part of the world are you located in and how did that impact your career chage (if at all)?</li>
                 <li>Finally, why did you choose tech and how are you feeling about it now?</li>
             </ul>
             <form class="p-3" action="/addStory" method="POST">
-                <div class="mb-2">
-                    <textarea class="form-control" placeholder="Tell your story" name="newStory" required="true" maxlength="3000" rows="3"></textarea>
-                </div>
                 <select class="form-select" aria-label="Former industry" name="industry" required="true">
                     <option selected>Choose your former industry</option>
                     <option value="Education">Education</option>
@@ -83,6 +77,38 @@ why did they choose tech/dev/data vs other careers
                     <option value="HumanServices">Human Services/NonProfits</option>
                     <option value="Other">Other</option>
                 </select>
+                <select class="form-select" aria-label="Years Experience" name="yearsExp" required="true">
+                    <option selected>Years of Experience before Tech</option>
+                    <option value="1-4 years">1-4 years</option>
+                    <option value="5-10 years">5-10 years</option>
+                    <option value="11-15 years">11-15 years</option>
+                    <option value="16+ years">16+ years</option>
+                </select>
+                <select class="form-select" aria-label="Time to Transition" name="transTime" required="true">
+                    <option selected>Time it Took You to Transition</option>
+                    <option value="&#60;6 months">&#60;6 months</option>
+                    <option value="6-12 months">6-12 months</option>
+                    <option value="1-2 years">1-2 years</option>
+                    <option value="2+ years">2+ years</option>
+                </select>
+                <select class="form-select" aria-label="Number of Interviews" name="intNumber" required="true">
+                    <option selected>Number of Interviews</option>
+                    <option value="&#60;10 interviews">&#60;10 interviews</option>
+                    <option value="10-50 interviews">10-50 interviews</option>
+                    <option value="51-100 interviews">51-100 interviews</option>
+                    <option value="100+ interviews">100+ interviews</option>
+                </select>
+                <select class="form-select" multiple aria-label="Tech Education" name="techEducation" required="true">
+                    <option selection>Tech Education Path</option>
+                    <option value="Higher Education">Higher Education (CS courses)</option>
+                    <option value="Bootcamp">Bootcamp</option> 
+                    <option value="Self Taught">Self Taught/Tutorials</option>
+                    <option value="On the job">On-the-Job Training</option>
+                    <option value="Other">Other(Describe below)</option>
+                </select>
+                <div class="mb-2">
+                    <textarea class="form-control" placeholder="Tell your story" name="newStory" required="true" maxlength="3000" rows="3"></textarea>
+                </div>
                 <input class="btn btn-primary m-2" type="submit" value="Submit">
             </form>
         </div>
