@@ -32,7 +32,7 @@
         <% for (let i=0; i < info.length; i++) {%>
         <div class="card" style="width: 20rem;">
             <div class="successStats card-body">
-                <h5 class="card-title"><%= info[i].lastTitle %>to <%=info[i].currentTitle %></h5>
+                <h5 class="card-title"><%= info[i].lastTitle %> to <%=info[i].currentTitle %></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><%= info[i].industry %></h6>
                 <h6 class="card-subtitle mb-2 text-muted"><%= info[i].transTime %></h6>
                 <h6 class="card-subtitle mb-2 text-muted"><%= info[i].yearsExp %></h6>
@@ -75,29 +75,29 @@ why did they choose tech/dev/data vs other careers
                     <option value="Education">Education</option>
                     <option value="Healthcare">Healthcare</option>
                     <option value="Hospitality">Hospitality</option>
-                    <option value="Engineering">Engineering/Oil & Energy</option>
-                    <option value="Finance">Finance/Accounting</option>
-                    <option value="Construction">Construction/Automotive/Manufacturing</option>
-                    <option value="Sales">Retail/Sales/Real Estate</option>
-                    <option value="Government">Government/Military</option>
-                    <option value="Communcations">Communications/Marketing</option>
-                    <option value="Logistics">Logistics/Supply Chain/Shipping</option>
-                    <option value="HumanServices">Human Services/NonProfits</option>
+                    <option value="Engineering/Oil & Energy">Engineering/Oil & Energy</option>
+                    <option value="Finance/Accounting">Finance/Accounting</option>
+                    <option value="Construction/Automotive/Manufacturing">Construction/Automotive/Manufacturing</option>
+                    <option value="Sales/Retail/Real Estate">Retail/Sales/Real Estate</option>
+                    <option value="Government/Military">Government/Military</option>
+                    <option value="Communcations/Marketing">Communications/Marketing</option>
+                    <option value="Logistics/Supply Chain/Shipping">Logistics/Supply Chain/Shipping</option>
+                    <option value="Human Services/NonProfits">Human Services/NonProfits</option>
                     <option value="Other">Other</option>
                 </select>
                 <select class="form-select p-3" aria-label="Years Experience" name="yearsExp" required="true">
                     <option selected>Years of Experience before Tech</option>
-                    <option value="1-4 years">1-4 years experience</option>
-                    <option value="5-10 years">5-10 years experience</option>
-                    <option value="11-15 years">11-15 years experience</option>
-                    <option value="16+ years">16+ years experience</option>
+                    <option value="1-4 years experience">1-4 years experience</option>
+                    <option value="5-10 years experience">5-10 years experience</option>
+                    <option value="11-15 years experience">11-15 years experience</option>
+                    <option value="16+ years experience">16+ years experience</option>
                 </select>
                 <select class="form-select p-3" aria-label="Time to Transition" name="transTime" required="true">
                     <option selected>Time it Took You to Transition</option>
-                    <option value="&#60;6">&#60;6 months to transition</option>
-                    <option value="6-12 months">6-12 months to transition</option>
-                    <option value="1-2 years">1-2 years to transition</option>
-                    <option value="2+ years">2+ years to transition</option>
+                    <option value="&#60;6 months to transition">&#60;6 months to transition</option>
+                    <option value="6-12 months to transition">6-12 months to transition</option>
+                    <option value="1-2 years to transition">1-2 years to transition</option>
+                    <option value="2+ years to transition">2+ years to transition</option>
                 </select>
                 <select class="form-select p-3" aria-label="Number of Interviews" name="intNumber" required="true">
                     <option selected>Number of Interviews</option>
@@ -108,10 +108,10 @@ why did they choose tech/dev/data vs other careers
                 </select>
                 <select class="form-select p-3" aria-label="Tech Education" name="techEducation" required="true">
                     <option selection>Tech Education Path</option>
-                    <option value="Higher Education">Higher Education (CS courses)</option>
+                    <option value="Higher Education/CS Courses">Higher Education (CS courses)</option>
                     <option value="Bootcamp">Bootcamp</option> 
-                    <option value="Self Taught">Self Taught/Tutorials</option>
-                    <option value="On the job">On-the-Job Training</option>
+                    <option value="Self Taught/Tutorials">Self Taught/Tutorials</option>
+                    <option value="On-the-job Training">On-the-Job Training</option>
                     <option value="Other">Other(Describe below)</option>
                 </select>
                 <div class="mb-2 p-3">
