@@ -28,9 +28,9 @@
 <!--Story Tiles-->
 <section class="p-5">
     <h2 class="lead text-center">Career Change Stories Shared by Real People</h2>
-    <div class="container d-flex flex-direction-row">
+    <div class="container d-flex flex-direction-row flex-wrap-wrap">
         <% for (let i=0; i < info.length; i++) {%>
-        <div class="card" style="width: 20rem;">
+        <div class="card" style="width: 40rem;">
             <div class="successStats card-body">
                 <h5 class="card-title"><%= info[i].lastTitle %> to <%=info[i].currentTitle %></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><%= info[i].industry %></h6>
