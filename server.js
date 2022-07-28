@@ -51,7 +51,7 @@ app.post('/addStat', (request, response) => {
 app.post('/addStory', (request, response) => {
     db.collection('stories').insertOne({newStory: request.body.newStory, industry: request.body.industry, 
         transTime: request.body.transTime, yearsExp: request.body.yearsExp, intNumber: request.body.intNumber, 
-        techEducation: request.body.techEducation, title: request.body.title})
+        techEducation: request.body.techEducation, lastTitle: request.body.lastTitle, currentTitle: request.body.currentTitle})
     .then(result => {
         console.log('Story Added')
         response.redirect('/stories')
