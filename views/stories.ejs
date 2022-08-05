@@ -137,14 +137,12 @@ why did they choose tech/dev/data vs other careers
     <a class="text-bs-purple" href="https://github.com/rachelschipull/career-motivation" alt="GitHub Repo">GitHub</a>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.19.1/ckeditor.js" integrity="sha512-Ooi9IbjM2SIDjQ02ENbPFuuORT8F8Rc+rowcYfLneDwKRxw1+gVVj5tciVmV/APnA/Ys+qy1MbNKK3k2EaAHcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js" integrity="sha512-P4rrEImABBYtBFdmrFPqF8rjh8iiRiupfQ4KLrBCL8dAivLiM2nh+1bJQeMb2ZglmIlGZdfTtgGdXH6H/hGVeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+    CKEDITOR.replace('#editor', {
+        plugins: 'wysiwygarea, toolbar, basicstyles'
+    })
 </script>
 </body>
 </html>
