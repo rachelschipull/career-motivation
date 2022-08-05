@@ -70,8 +70,8 @@ why did they choose tech/dev/data vs other careers
                 <li>Finally, why did you choose tech and how are you feeling about it now?</li>
             </ul>
             <form class="p-3" action="/addStory" method="POST">
-                <input type="text" placeholder="Previous Title" name="lastTitle" required="true">
-                <input type="text" placeholder="Current Title" name="currentTitle" required="true">
+                Previous Title <input type="text" placeholder="Previous Title" name="lastTitle" required="true">
+                Current Title <input type="text" placeholder="Current Title" name="currentTitle" required="true">
                 <select class="form-select w-50 m-2 p-3" aria-label="Former industry" name="industry" required="true">
                     <option selected>Choose your former industry</option>
                     <option value="Education">Education</option>
@@ -141,7 +141,7 @@ why did they choose tech/dev/data vs other careers
 
 <script>
     CKEDITOR.replace('newStory', {
-        plugins: 'wysiwygarea, toolbar, basicstyles'
+        plugins: 'wysiwygarea, toolbar, basicstyles, link'
     })
 </script>
 </body>
