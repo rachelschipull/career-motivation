@@ -15,4 +15,4 @@ Feel free to reach out if you have suggestions or other comments.
 If you are currently considering a career in tech and don't know where to start, check out [100Devs](https://leonnoel.com/100devs/).
 
 
-Collaborators: These folx helped with logic and code along the way, thanks a bunch! @Rascal_Two @Gratcan @Screwage 
+Collaborators: These folx helped with logic and code along the way, thanks a bunch! @Rascal_Two @Gratcan @Screwage @chrissiecodes
