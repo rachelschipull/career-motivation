@@ -86,15 +86,7 @@ why did they choose tech/dev/data vs other careers
     <div class="container">
         <div>
             <h2 class="text-center">Add Your Story</h2>
-            <p>Share a paragraph or two about how you made the transition to tech. Consider the following questions while writing your story.</p>
-            <ul>
-                <li>What inspired the change and how did you know it was the right time?</li>
-                <li>What was your interview process like for your first tech role?</li>
-                <li>How did networking play a role in your transition, if at all?</li>
-                <li>What part of the world are you located in and how did that impact your career chage (if at all)?</li>
-                <li>Did you choose to relocate as part of your career transition and how did that impact your income?</li>
-                <li>Finally, why did you choose tech and how are you feeling about it now?</li>
-            </ul>
+            <p>Answer the following dropdowns and share a paragraph or two about how you made the transition to tech. Consider the listed questions while writing your story.</p>
             <form class="p-3" action="/addStory" method="POST">
                 Previous Title <input type="text" placeholder="Previous Title" name="lastTitle" required="true">
                 Current Title <input type="text" placeholder="Current Title" name="currentTitle" required="true">
@@ -143,6 +135,14 @@ why did they choose tech/dev/data vs other careers
                     <option value="Other">Other(Describe below)</option>
                 </select>
                 <div class="mb-2 p-3">
+                    <ul>
+                        <li>What inspired the change to tech and how did you know it was the right time?</li>
+                        <li>What was your interview process like for your first tech role?</li>
+                        <li>How did networking play a role in your transition, if at all?</li>
+                        <li>What part of the world are you located in and how did that impact your career chage (if at all)?</li>
+                        <li>Did you choose to relocate as part of your career transition and how did that impact your income?</li>
+                        <li>Finally, why did you choose tech and how are you feeling about it now?</li>
+                    </ul>
                     <textarea class="form-control" placeholder="Tell your story - Max 3000 Chars" name="newStory" id="editor" required="true" maxlength="3000" rows="3"></textarea>
                 </div>
                 <input class="btn btn-primary m-2" type="submit" value="Submit">
