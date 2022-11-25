@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient
 const { response } = require('express')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 require('dotenv').config()
 
 let db,
@@ -59,6 +59,6 @@ app.post('/addStory', (request, response) => {
     .catch(error => console.error(error))
 })
 
-app.listen(process.env.PORT || PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
