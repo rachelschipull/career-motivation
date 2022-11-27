@@ -1,10 +1,10 @@
 # Welcome to Career Change Motivation
 
-### View the app [here](http://career-motivation.herokuapp.com/).
+### View the app [here](https://careermotivation.onrender.com).
 
-This application was created to motivate career changers from tech to keep going through the difficult parts of learning and interviewing. 
+This application was created to motivate career changers to tech to keep going through the difficult parts of learning and interviewing. 
 
-Bearing in mind that money isn't the only motivator, there are plans in the future to add a second page to share career changers' stories.
+Bearing in mind that money isn't the only motivator, the second page features career changer stories. This will eventually be optimized with a search function.
 
 Anyone who has started their career outside of tech and transitioned into a career in tech is invited to contribute.
 
